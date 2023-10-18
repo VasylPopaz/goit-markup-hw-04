@@ -174,6 +174,7 @@ img {
 
 .nav-link {
   display: inline-block;
+  position: relative;
   padding-top: 24px;
   padding-bottom: 24px;
   color: var(--secondary-navy-color);
@@ -337,7 +338,8 @@ img {
   padding: 120px 0;
 }
 
-.team-list, .team .social-list {
+.team-list,
+.team .social-list {
   display: flex;
   gap: 24px;
 }
@@ -406,7 +408,8 @@ img {
   border-radius: 4px;
   border: 1px solid #8e8f99;
   color: var(--light-slate-color);
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s,
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
 }
 
 .customers .icon {
@@ -517,17 +520,20 @@ img {
 .app-link {
   display: block;
   border: 1px solid var(--cornflower-color);
-background: var(--primary-white-color);
-transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s, border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s ;
+  background: var(--primary-white-color);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s,
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
 }
 
 .app-link:hover,
 .app-link:focus {
   border: 1px solid var(--cloud-color);
-box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 
-.app-descr-text{
+.app-descr-text {
   color: var(--cloud-color);
   font-size: 16px;
   font-weight: 400;
@@ -540,9 +546,7 @@ box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47,
   height: 100%;
   transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
-  padding-top: 40px;
-  padding-left: 32px;
-  padding-right: 32px;
+  padding: 40px 32px;
   background-color: var(--iris-text-color);
 }
 
@@ -611,7 +615,7 @@ box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47,
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1) 0;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   width: 408px;
   min-height: 584px;
   border-radius: 4px;
@@ -632,9 +636,10 @@ box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47,
   top: 24px;
   right: 24px;
   border-radius: 50%;
-  border: 1px solid rgba(0, 0, 0, 0.1)
-  background-color: var(--cornflower-color);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: #e7e9fc;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-window .close-icon {
@@ -642,12 +647,14 @@ box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47,
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.button-close:hover, .button-close:focus {
+.button-close:hover,
+.button-close:focus {
   background-color: var(--accent-color);
   border: none;
 }
 
-.button-close:hover .close-icon, .button-close:focus .close-icon{
+.button-close:hover .close-icon,
+.button-close:focus .close-icon {
   fill: var(--primary-white-color);
 }
 
